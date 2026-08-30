@@ -29,15 +29,7 @@
 </head>
 <body>
   <div class="noise"></div>
-  <header id="header">
-    <div class="nav">
-      <a class="brand" href="#top"><span class="mark"><i></i><i></i><i></i></span>WAVNIX</a>
-      <nav class="desktop"><a href="#solutions">Solutions</a><a href="#education">Product</a><a href="#industries">Industries</a><a href="#process">Process</a></nav>
-      <a class="nav-cta" href="#start">Start a project ↗</a>
-      <button class="menu" id="menu" aria-expanded="false" aria-label="Open menu">☰</button>
-    </div>
-    <nav class="mobile" id="mobile"><a href="#solutions">Solutions ↗</a><a href="#education">Product ↗</a><a href="#industries">Industries ↗</a><a href="#process">Process ↗</a><a href="#start">Start a project ↗</a></nav>
-  </header>
+  <div id="site-header"></div>
   <main id="top">
     <section class="hero shell">
       <div class="hero-copy">
@@ -71,7 +63,8 @@
     <section class="shell section" id="process"><div class="heading"><div><p class="kicker">How we work</p><h2>Clear from day one.</h2></div><p>A focused process that keeps the business goal, experience and engineering moving together.</p></div><div class="process"><article><span>01</span><hr><h3>Discover</h3><p>We map the real problem, users and business outcome before choosing technology.</p></article><article><span>02</span><hr><h3>Design</h3><p>We shape the product flow, interface and technical plan into one clear direction.</p></article><article><span>03</span><hr><h3>Build</h3><p>We develop, integrate and test the complete solution in transparent milestones.</p></article><article><span>04</span><hr><h3>Grow</h3><p>We launch, support and improve the system as your operation evolves.</p></article></div></section>
     <section class="shell start" id="start"><div class="start-panel"><p class="kicker">Have something ambitious in mind?</p><h2>Let’s turn it into something people remember.</h2><p>Tell us the problem, the idea or the opportunity. Wavnix will help shape the right digital path forward.</p><a class="btn primary" href="#solutions">Plan your project ↗</a></div></section>
   </main>
-  <footer><div class="shell footer"><div><a class="brand" href="#top"><span class="mark"><i></i><i></i><i></i></span>WAVNIX</a><p>Software, AI and digital growth—engineered as one connected service.</p></div><div class="footer-links"><a href="#solutions">Solutions</a><a href="#education">Education OS</a><a href="#industries">Industries</a><a href="#process">Process</a></div><div class="domain"><span>Official domain</span><strong>wavnix.com</strong></div></div><div class="shell bottom"><span>© 2026 Wavnix. All rights reserved.</span><span>Built to move forward.</span></div></footer>
+  <div id="site-footer"></div>
+  <script src="/assets/js/layout.js"></script>
   <script>
     var capabilities=["Web applications","AI agents","Custom software","Mobile experiences","API development","Domain & hosting","Meta marketing","Business automation"];
     document.getElementById("marquee").innerHTML=capabilities.concat(capabilities).map(function(x){return "<span>"+x+" <i>✦</i></span>"}).join("");
@@ -93,10 +86,16 @@
     }render();
     var list=["Education","Retail & e-commerce","Healthcare","Real estate","Hospitality","Startups","Professional services","NGOs"];
     document.getElementById("industry-grid").innerHTML=list.map(function(x,i){return '<div class="industry"><span>0'+(i+1)+'</span><strong>'+x+'</strong></div>'}).join("");
-    var menu=document.getElementById("menu"),mobile=document.getElementById("mobile");
-    menu.onclick=function(){var open=mobile.classList.toggle("open");menu.setAttribute("aria-expanded",open);menu.textContent=open?"×":"☰"};
-    mobile.querySelectorAll("a").forEach(function(a){a.onclick=function(){mobile.classList.remove("open");menu.textContent="☰"}});
-    window.addEventListener("scroll",function(){document.getElementById("header").classList.toggle("scrolled",window.scrollY>24)},{passive:true});
+    function initSiteLayout(){
+      var header=document.getElementById("header"),menu=document.getElementById("menu"),mobile=document.getElementById("mobile");
+      if(!header||!menu||!mobile)return;
+      menu.onclick=function(){var open=mobile.classList.toggle("open");menu.setAttribute("aria-expanded",open);menu.setAttribute("aria-label",open?"Close menu":"Open menu");menu.textContent=open?"×":"☰"};
+      mobile.querySelectorAll("a").forEach(function(a){a.onclick=function(){mobile.classList.remove("open");menu.setAttribute("aria-expanded","false");menu.setAttribute("aria-label","Open menu");menu.textContent="☰"}});
+      var updateHeader=function(){header.classList.toggle("scrolled",window.scrollY>24)};
+      updateHeader();
+      window.addEventListener("scroll",updateHeader,{passive:true});
+    }
+    if(window.__wavnixLayoutReady){initSiteLayout()}else{document.addEventListener("wavnix:layout-ready",initSiteLayout,{once:true})}
   </script>
 </body>
 </html>
