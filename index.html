@@ -158,6 +158,7 @@
   <div id="site-footer"></div>
   <script src="/assets/js/layout.js"></script>
   <script>
+    (function(){var url=new URL(window.location.href),keys=[];url.searchParams.forEach(function(_,key){if(key.indexOf("utm_")===0||["gclid","fbclid","mc_cid","mc_eid"].indexOf(key)>-1)keys.push(key)});if(keys.length){keys.forEach(function(key){url.searchParams.delete(key)});window.history.replaceState(window.history.state,"",url.pathname+url.search+url.hash)}})();
     var capabilities=["Web applications","AI agents","Custom software","Mobile experiences","API development","Domain & hosting","Meta marketing","Business automation"];
     document.getElementById("marquee").innerHTML=capabilities.concat(capabilities).map(function(x){return "<span>"+x+" <i>✦</i></span>"}).join("");
     document.getElementById("hero-bars").innerHTML=[34,55,28,64,42,78,52,86,46,69,38,73,58,89,66,82].map(function(h){return '<i style="height:'+h+'%"></i>'}).join("");
