@@ -10,7 +10,7 @@
   <style>
     :root{--ink:#050706;--panel:#0c110d;--panel2:#111713;--line:rgba(255,255,255,.1);--lime:#b9ff31;--white:#f5f8f2;--muted:#929b8f;--violet:#a78bfa;--cyan:#55ddff;--orange:#ffb25b;--blue:#67a8ff;--pink:#ff7ecb}
     *{box-sizing:border-box}html{scroll-behavior:smooth;background:var(--ink)}body{margin:0;background:var(--ink);color:var(--white);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;overflow-x:hidden}::selection{color:var(--ink);background:var(--lime)}a{color:inherit;text-decoration:none}button{font:inherit}.shell{width:min(1180px,calc(100% - 48px));margin:auto}.section{padding-block:120px}.noise{position:fixed;inset:0;z-index:50;pointer-events:none;opacity:.025;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.95' numOctaves='4'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
-    header{position:fixed;inset:0 0 auto;z-index:40;padding:18px 0;border-bottom:1px solid transparent;transition:.24s}header.scrolled{padding:10px 0;background:rgba(5,7,6,.82);border-color:var(--line);backdrop-filter:blur(18px)}.nav{width:min(1240px,calc(100% - 40px));margin:auto;display:grid;grid-template-columns:1fr auto 1fr;align-items:center}.brand{display:inline-flex;align-items:center;gap:10px;width:max-content;font-size:16px;font-weight:800;letter-spacing:.2em}.mark{width:33px;height:28px;display:flex;align-items:flex-end;gap:3px;transform:skewX(-10deg)}.mark i{width:8px;background:var(--lime);border-radius:2px;box-shadow:0 0 16px rgba(185,255,49,.22)}.mark i:nth-child(1){height:70%}.mark i:nth-child(2){height:100%}.mark i:nth-child(3){height:52%}.desktop{display:flex;gap:34px;font-size:13px;color:#bdc5ba}.desktop a{position:relative;padding:10px 0}.desktop a:after{content:"";position:absolute;inset:auto 0 3px;height:1px;background:var(--lime);transform:scaleX(0);transition:.2s}.desktop a:hover:after{transform:scaleX(1)}.nav-cta{justify-self:end;padding:12px 16px;border:1px solid rgba(185,255,49,.28);border-radius:99px;color:#d4ff7a;font-size:12px;font-weight:700;transition:.2s}.nav-cta:hover{color:var(--ink);background:var(--lime)}.menu,.mobile{display:none}
+    header{position:fixed;inset:0 0 auto;z-index:40;padding:18px 0;border-bottom:1px solid transparent;transition:.24s}header.scrolled{padding:10px 0;background:rgba(5,7,6,.82);border-color:var(--line);backdrop-filter:blur(18px)}.nav{width:min(1240px,calc(100% - 40px));margin:auto;display:grid;grid-template-columns:1fr auto 1fr;align-items:center}.brand{display:inline-flex;align-items:center;gap:10px;width:max-content;font-size:16px;font-weight:800;letter-spacing:.2em}.mark{width:33px;height:28px;display:flex;align-items:flex-end;gap:3px;transform:skewX(-10deg)}.mark i{width:8px;background:var(--lime);border-radius:2px;box-shadow:0 0 16px rgba(185,255,49,.22)}.mark i:nth-child(1){height:70%}.mark i:nth-child(2){height:100%}.mark i:nth-child(3){height:52%}.desktop{display:flex;gap:24px;font-size:13px;color:#bdc5ba}.desktop a{position:relative;padding:10px 0}.desktop a:after{content:"";position:absolute;inset:auto 0 3px;height:1px;background:var(--lime);transform:scaleX(0);transition:.2s}.desktop a:hover:after{transform:scaleX(1)}.nav-cta{justify-self:end;padding:12px 16px;border:1px solid rgba(185,255,49,.28);border-radius:99px;color:#d4ff7a;font-size:12px;font-weight:700;transition:.2s}.nav-cta:hover{color:var(--ink);background:var(--lime)}.menu,.mobile{display:none}
     .hero{position:relative;min-height:880px;padding-top:190px;padding-bottom:112px;display:grid;grid-template-columns:minmax(0,1.04fr) minmax(420px,.96fr);align-items:center;gap:44px}.eyebrow,.kicker{color:var(--lime);font-size:11px;font-weight:750;letter-spacing:.2em;text-transform:uppercase}.eyebrow{display:inline-flex;align-items:center;gap:9px;padding:8px 12px;border:1px solid rgba(185,255,49,.2);background:rgba(185,255,49,.045);border-radius:99px}.dot{width:6px;height:6px;border-radius:50%;background:var(--lime);box-shadow:0 0 0 5px rgba(185,255,49,.1),0 0 16px var(--lime);animation:dot 2s infinite}.hero h1{margin:30px 0 24px;font-size:clamp(62px,7.2vw,108px);font-weight:650;letter-spacing:-.073em;line-height:.88}.hero h1 span{display:block;color:transparent;-webkit-text-stroke:1px rgba(245,248,242,.78)}.hero-copy>p{max-width:600px;margin:0;color:#aab2a7;font-size:18px;line-height:1.7}.actions{display:flex;gap:12px;margin-top:34px;flex-wrap:wrap}.btn{min-height:50px;display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:0 20px;border-radius:8px;font-size:13px;font-weight:750;transition:.2s}.btn:hover{transform:translateY(-3px)}.primary{color:var(--ink);background:var(--lime);box-shadow:0 12px 40px rgba(185,255,49,.14)}.ghost{border:1px solid var(--line);color:#d4dad1;background:rgba(255,255,255,.025)}.trust{margin-top:38px;display:flex;align-items:center;gap:12px;max-width:430px;color:#7f897c;font-size:12px}.trust b{display:grid;place-items:center;width:36px;height:36px;border:1px solid rgba(185,255,49,.16);border-radius:50%;color:var(--lime);background:rgba(185,255,49,.07)}
     .visual{position:relative;height:570px;border:1px solid var(--line);border-radius:32px;overflow:hidden;background:radial-gradient(circle at 50% 45%,rgba(185,255,49,.09),transparent 32%),linear-gradient(155deg,rgba(255,255,255,.035),rgba(255,255,255,.008));box-shadow:0 40px 110px rgba(0,0,0,.5)}.grid{position:absolute;inset:0;opacity:.33;background-image:linear-gradient(rgba(255,255,255,.055) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.055) 1px,transparent 1px);background-size:46px 46px;mask-image:radial-gradient(circle,#000 20%,transparent 75%)}.orbit{position:absolute;top:44%;left:50%;border:1px solid rgba(185,255,49,.13);border-radius:50%;transform:translate(-50%,-50%) rotate(-18deg)}.orbit:before{content:"";position:absolute;top:12%;left:10%;width:7px;height:7px;border-radius:50%;background:var(--lime);box-shadow:0 0 18px var(--lime)}.o1{width:380px;height:250px;animation:orbit 10s ease-in-out infinite}.o2{width:260px;height:360px;transform:translate(-50%,-50%) rotate(31deg)}.core{position:absolute;left:50%;top:43%;width:104px;height:104px;display:grid;place-items:center;transform:translate(-50%,-50%);border-radius:28px;background:linear-gradient(145deg,#d3ff71,#83cc10);box-shadow:0 0 0 12px rgba(185,255,49,.045),0 0 70px rgba(185,255,49,.27);color:#091006;font-size:48px;font-weight:900}.node{position:absolute;display:grid;grid-template-columns:auto 1fr;column-gap:9px;min-width:126px;padding:12px 14px;border:1px solid var(--line);border-radius:12px;background:rgba(10,14,11,.86);font-size:11px;font-weight:700;animation:float 5s ease-in-out infinite}.node em{grid-row:1/3;color:var(--lime);font-style:normal;font-size:18px}.node small{color:#6f786d;font-size:8px;text-transform:uppercase}.n1{top:17%;left:8%}.n2{top:18%;right:7%;animation-delay:.6s}.n3{top:53%;right:5%;animation-delay:1s}.system{position:absolute;inset:auto 9% 7%;padding:18px;border:1px solid var(--line);border-radius:17px;background:rgba(7,10,8,.86)}.system header{position:static;padding:0;display:flex;justify-content:space-between;color:#cbd2c8;font-size:10px;letter-spacing:.12em}.system header b{padding:5px 8px;border-radius:99px;color:var(--lime);background:rgba(185,255,49,.08);font-size:7px}.bars{height:62px;margin-top:16px;display:flex;align-items:flex-end;gap:7px}.bars i{flex:1;border-radius:2px 2px 0 0;background:linear-gradient(to top,rgba(185,255,49,.16),rgba(185,255,49,.8))}
     .marquee{overflow:hidden;border-block:1px solid var(--line);background:#080b09}.marquee div{width:max-content;display:flex;animation:marquee 32s linear infinite}.marquee span{height:58px;display:flex;align-items:center;gap:26px;padding-left:26px;color:#8e978b;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;white-space:nowrap}.marquee i{color:var(--lime);font-style:normal}
@@ -49,6 +49,7 @@
     @media(max-width:1060px){.story-copy{padding:48px}.story-console{width:calc(100% - 56px);margin:28px}.team-grid.technical{grid-template-columns:repeat(2,1fr)}}
     @media(max-width:860px){.story-stage{grid-template-columns:1fr}.story-copy{border-right:0;border-bottom:1px solid var(--line)}.story-console{justify-self:center;width:calc(100% - 80px);margin:54px 40px}.team-intro{grid-template-columns:1fr;gap:22px}.team-tree{padding:34px}.team-grid.studio{grid-template-columns:1fr}.team-grid.studio article{min-height:104px;align-items:center;flex-direction:row}.team-grid.studio article>div{margin:0}}
     @media(max-width:600px){.about-heading h2,.team-intro h2{font-size:43px}.story-stage{min-height:0;border-radius:20px}.story-copy{padding:38px 24px}.story-copy h3{font-size:50px}.story-console{width:calc(100% - 28px);margin:34px 14px;transform:none}.story-console>header{grid-template-columns:1fr auto;padding:0 14px}.story-console>header span{display:none}.console-line{min-height:78px;grid-template-columns:26px 1fr;padding:0 16px;gap:8px}.console-line>i{display:none}.story-values{grid-template-columns:1fr}.story-values>div{min-height:auto;border-right:0;border-bottom:1px solid var(--line)}.team-section{margin-top:92px}.team-tree{padding:22px 14px}.team-founder>i{display:none}.team-branch{width:1px;height:34px;display:block;background:var(--line)}.team-branch>*{display:none}.team-leadership{grid-template-columns:1fr;gap:10px}.team-group{margin-top:42px}.team-grid.technical,.team-grid.studio{grid-template-columns:1fr}.team-grid.technical article,.team-grid.studio article{min-height:96px;align-items:center;flex-direction:row}.team-grid.technical article>div,.team-grid.studio article>div{margin:0}.story-modal{max-height:92vh}.story-modal-head{padding:28px 62px 22px 22px}.story-modal-body{max-height:calc(92vh - 130px);padding:8px 22px 32px}.story-modal-body article p{padding-left:0;font-size:12px}.story-signoff{flex-wrap:wrap}.story-signoff strong{width:100%;margin-left:0}}
+    .domain-shop{position:relative;scroll-margin-top:86px}.domain-shop:before{content:"";position:absolute;z-index:-1;width:420px;height:420px;right:-12%;top:8%;border-radius:50%;background:rgba(185,255,49,.07);filter:blur(100px)}.domain-head{max-width:760px;margin-bottom:34px}.domain-head h2{font-size:clamp(40px,6vw,76px);line-height:.98;letter-spacing:-.065em;margin:12px 0 18px}.domain-head p:last-child{max-width:680px;color:var(--muted);font-size:17px;line-height:1.75}.domain-grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(320px,.85fr);gap:18px;align-items:start}.domain-panel,.domain-summary{border:1px solid var(--line);border-radius:28px;background:linear-gradient(145deg,rgba(17,23,19,.98),rgba(8,11,9,.96));box-shadow:0 30px 100px rgba(0,0,0,.28)}.domain-panel{padding:30px}.domain-search-form{display:grid;grid-template-columns:1fr auto;gap:10px;padding:7px;border:1px solid rgba(185,255,49,.3);background:#080b09;border-radius:17px;box-shadow:0 0 0 5px rgba(185,255,49,.025)}.domain-search-form:focus-within{border-color:var(--lime);box-shadow:0 0 0 5px rgba(185,255,49,.08)}.domain-search-form input{min-width:0;border:0;outline:0;background:transparent;color:var(--white);padding:13px 14px;font-size:16px}.domain-search-form input::placeholder{color:#657064}.domain-search-form button,.domain-order-btn{border:0;border-radius:12px;padding:13px 18px;background:var(--lime);color:#071006;font-weight:850;cursor:pointer;transition:transform .2s,box-shadow .2s,opacity .2s}.domain-search-form button:hover,.domain-order-btn:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(185,255,49,.2)}.domain-search-form button:disabled,.domain-order-btn[aria-disabled="true"]{cursor:not-allowed;opacity:.48;transform:none;box-shadow:none}.domain-quick{display:flex;flex-wrap:wrap;gap:8px;margin-top:13px}.domain-quick button,.domain-alt button{border:1px solid var(--line);background:#0a0f0b;color:#bfc7bc;border-radius:999px;padding:8px 12px;cursor:pointer;transition:.2s}.domain-quick button:hover,.domain-quick button.active,.domain-alt button:hover{border-color:rgba(185,255,49,.55);color:var(--lime);background:rgba(185,255,49,.06)}.domain-helper{display:flex;gap:8px;align-items:center;color:#778275;font-size:12px;margin:15px 2px 0}.domain-live-dot{width:7px;height:7px;border-radius:50%;background:var(--lime);box-shadow:0 0 13px rgba(185,255,49,.8)}.domain-result{min-height:154px;margin-top:22px;padding:22px;border:1px solid var(--line);border-radius:20px;background:#080b09;display:grid;grid-template-columns:1fr auto;gap:16px;align-items:center}.domain-result[data-state="available"]{border-color:rgba(185,255,49,.42);background:linear-gradient(130deg,rgba(185,255,49,.09),#080b09 58%)}.domain-result[data-state="registered"]{border-color:rgba(255,126,126,.3)}.domain-result[data-state="loading"] .domain-result-icon{animation:domainPulse 1s infinite alternate}.domain-result-icon{width:45px;height:45px;display:grid;place-items:center;border-radius:14px;background:rgba(255,255,255,.055);font-size:20px;margin-bottom:14px}.domain-result h3{font-size:22px;margin:0 0 7px;overflow-wrap:anywhere}.domain-result p{margin:0;color:var(--muted);line-height:1.55;font-size:14px}.domain-result-price{text-align:right}.domain-result-price strong{display:block;color:var(--lime);font-size:25px;letter-spacing:-.04em}.domain-result-price span{color:#778275;font-size:11px}.domain-alt{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:8px}.domain-alt button.available{border-color:rgba(185,255,49,.5);color:var(--lime)}.domain-alt button.registered{opacity:.45;text-decoration:line-through}.domain-prices{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;margin:16px 0 28px}.domain-price-chip{border:1px solid var(--line);border-radius:14px;padding:13px 8px;text-align:center;background:rgba(255,255,255,.018)}.domain-price-chip strong{display:block;font-size:14px}.domain-price-chip span{display:block;color:var(--lime);font-size:12px;margin-top:4px}.hosting-title{display:flex;justify-content:space-between;gap:20px;align-items:end;margin:8px 0 14px}.hosting-title h3{font-size:25px;letter-spacing:-.035em;margin:0}.hosting-title p{margin:0;color:#778275;font-size:12px}.hosting-plans{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.hosting-plan{position:relative;text-align:left;border:1px solid var(--line);border-radius:18px;background:#0a0e0b;color:var(--white);padding:20px;cursor:pointer;transition:.22s}.hosting-plan:hover,.hosting-plan.selected{border-color:rgba(185,255,49,.5);transform:translateY(-3px);background:rgba(185,255,49,.045)}.hosting-plan.selected{box-shadow:0 16px 45px rgba(0,0,0,.25)}.hosting-plan .tag{position:absolute;right:12px;top:12px;border-radius:99px;background:var(--lime);color:#071006;padding:4px 8px;font-size:9px;font-weight:900;text-transform:uppercase;letter-spacing:.08em}.hosting-plan h4{margin:0 0 7px;font-size:18px}.hosting-plan .price{color:var(--lime);font-size:20px;font-weight:850}.hosting-plan .price small{color:#778275;font-size:10px;font-weight:500}.hosting-plan ul{list-style:none;padding:0;margin:16px 0 0;color:#9aa398;font-size:12px;line-height:1.8}.hosting-plan li:before{content:"✓";color:var(--lime);margin-right:7px}.domain-summary{position:sticky;top:105px;padding:28px}.domain-summary .summary-label{margin:0 0 7px;color:var(--lime);font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.15em}.domain-summary h3{margin:0 0 9px;font-size:29px;letter-spacing:-.045em}.domain-summary>.summary-copy{color:var(--muted);font-size:14px;line-height:1.65;margin:0 0 23px}.domain-order-lines{border-block:1px solid var(--line);padding:11px 0;margin-bottom:18px}.domain-order-line{display:flex;justify-content:space-between;gap:16px;padding:9px 0;color:#a5aea2;font-size:13px}.domain-order-line strong{color:var(--white);text-align:right}.domain-order-total{display:flex;justify-content:space-between;align-items:end;gap:16px;margin:23px 0}.domain-order-total span{font-size:12px;color:#7c867a}.domain-order-total strong{font-size:30px;color:var(--lime);letter-spacing:-.04em}.domain-order-btn{display:flex;width:100%;align-items:center;justify-content:center;gap:8px}.domain-note{color:#6f786d;font-size:11px;line-height:1.55;margin:14px 0 0}.domain-service-row{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:20px}.domain-service-row div{padding:12px;border-radius:13px;background:rgba(255,255,255,.025);border:1px solid rgba(255,255,255,.055);font-size:11px;color:#8f998c}.domain-service-row strong{display:block;color:#dfe5dc;font-size:12px;margin-bottom:3px}@keyframes domainPulse{to{transform:scale(1.08);box-shadow:0 0 25px rgba(185,255,49,.15)}}@media(max-width:980px){.domain-grid{grid-template-columns:1fr}.domain-summary{position:relative;top:auto}.domain-prices{grid-template-columns:repeat(3,1fr)}}@media(max-width:720px){.domain-panel,.domain-summary{padding:20px;border-radius:22px}.domain-search-form{grid-template-columns:1fr}.domain-search-form button{width:100%}.domain-result{grid-template-columns:1fr}.domain-result-price{text-align:left}.hosting-plans{grid-template-columns:1fr}.hosting-plan{padding:19px}.domain-service-row{grid-template-columns:1fr}.domain-head h2{font-size:44px}.domain-prices{grid-template-columns:repeat(2,1fr)}}
 
   </style>
 </head>
@@ -97,6 +98,92 @@
         <aside class="estimate-result" aria-live="polite"><div class="result-status"><span><i></i>LIVE ESTIMATE</span><b>⌘</b></div><p>Planning range</p><div class="estimate-price"><span id="estimate-low"></span><small>–</small><span id="estimate-high"></span></div><div class="estimate-time"><b>◷</b><span><small>Estimated delivery</small><strong id="estimate-weeks"></strong></span></div><div class="estimate-summary"><div><span>Project</span><b id="estimate-project"></b></div><div><span>Scope</span><b id="estimate-scope"></b></div><div><span>Add-ons</span><b id="estimate-addon-count"></b></div><div><span>Priority</span><b id="estimate-priority"></b></div></div><button class="btn primary estimate-send" id="send-estimate" type="button">Send estimate to Wavnix ◉</button><a class="estimate-detail" href="#start">Or tell us the complete project brief ↗</a><p class="estimate-disclaimer">This is an indicative planning range—not a final quotation. Exact cost and timeline are confirmed after requirements review.</p></aside>
       </div>
     </div></section>
+
+    <section class="domain-shop shell section" id="domains">
+      <div class="domain-head">
+        <p class="kicker">Domain &amp; managed hosting</p>
+        <h2>Find your name.<br><span>Put it online.</span></h2>
+        <p>Check a domain against its public registry, see our clear asking price, pair it with managed hosting, and send the complete order to Wavnix in one click.</p>
+      </div>
+      <div class="domain-grid">
+        <div class="domain-panel">
+          <form class="domain-search-form" id="domain-search-form">
+            <label class="sr-only" for="domain-search-input">Domain name</label>
+            <input id="domain-search-input" name="domain" inputmode="url" autocomplete="off" spellcheck="false" placeholder="yourbrand.com" aria-describedby="domain-search-help">
+            <button type="submit" id="domain-search-submit">Check availability →</button>
+          </form>
+          <div class="domain-quick" aria-label="Choose an extension">
+            <button type="button" class="active" data-domain-tld=".com">.com</button>
+            <button type="button" data-domain-tld=".net">.net</button>
+            <button type="button" data-domain-tld=".org">.org</button>
+            <button type="button" data-domain-tld=".xyz">.xyz</button>
+            <button type="button" data-domain-tld=".io">.io</button>
+            <button type="button" data-domain-tld=".ai">.ai</button>
+          </div>
+          <p class="domain-helper" id="domain-search-help"><span class="domain-live-dot"></span>Live public-registry check · final confirmation before payment</p>
+
+          <div class="domain-result" id="domain-result" data-state="idle" aria-live="polite">
+            <div>
+              <div class="domain-result-icon" id="domain-result-icon">⌕</div>
+              <h3 id="domain-result-title">Search for your business name</h3>
+              <p id="domain-result-copy">We will check the registry and show the Wavnix asking price instantly.</p>
+            </div>
+            <div class="domain-result-price" id="domain-result-price">
+              <strong>Live check</strong><span>No account needed</span>
+            </div>
+            <div class="domain-alt" id="domain-alternatives" hidden></div>
+          </div>
+
+          <div class="domain-prices" aria-label="Domain asking prices">
+            <div class="domain-price-chip"><strong>.com</strong><span>৳1,850</span></div>
+            <div class="domain-price-chip"><strong>.net</strong><span>৳2,050</span></div>
+            <div class="domain-price-chip"><strong>.org</strong><span>৳1,650</span></div>
+            <div class="domain-price-chip"><strong>.xyz</strong><span>৳650</span></div>
+            <div class="domain-price-chip"><strong>.io</strong><span>৳7,900</span></div>
+            <div class="domain-price-chip"><strong>.ai</strong><span>৳25,500 / 2yr</span></div>
+          </div>
+
+          <div class="hosting-title">
+            <div><p class="kicker">Managed hosting</p><h3>Choose a launch plan</h3></div>
+            <p>SSL, migration &amp; support included</p>
+          </div>
+          <div class="hosting-plans">
+            <button class="hosting-plan" type="button" data-hosting-plan="Starter" data-hosting-price="3500" aria-pressed="false">
+              <h4>Starter</h4><div class="price">৳3,500 <small>/ year</small></div>
+              <ul><li>1 website · 5GB</li><li>3 email accounts</li><li>Weekly backup</li><li>Basic support</li></ul>
+            </button>
+            <button class="hosting-plan selected" type="button" data-hosting-plan="Business" data-hosting-price="6500" aria-pressed="true">
+              <span class="tag">Recommended</span><h4>Business</h4><div class="price">৳6,500 <small>/ year</small></div>
+              <ul><li>3 websites · 20GB</li><li>10 email accounts</li><li>Daily backup</li><li>Priority support</li></ul>
+            </button>
+            <button class="hosting-plan" type="button" data-hosting-plan="Pro" data-hosting-price="12000" aria-pressed="false">
+              <h4>Pro</h4><div class="price">৳12,000 <small>/ year</small></div>
+              <ul><li>10 websites · 50GB</li><li>25 email accounts</li><li>Performance setup</li><li>Priority support</li></ul>
+            </button>
+          </div>
+        </div>
+
+        <aside class="domain-summary" aria-label="Domain order summary">
+          <p class="summary-label">Your launch summary</p>
+          <h3>Domain + hosting, handled.</h3>
+          <p class="summary-copy">Wavnix will reconfirm the registry result, issue the invoice, register the domain in your details, configure DNS and launch the hosting.</p>
+          <div class="domain-order-lines">
+            <div class="domain-order-line"><span>Domain</span><strong id="domain-order-name">Search first</strong></div>
+            <div class="domain-order-line"><span>Domain price</span><strong id="domain-order-domain-price">—</strong></div>
+            <div class="domain-order-line"><span>Hosting</span><strong id="domain-order-hosting">Business · ৳6,500/yr</strong></div>
+          </div>
+          <div class="domain-order-total"><span>Estimated first-term total</span><strong id="domain-order-total">৳6,500</strong></div>
+          <a class="domain-order-btn" id="domain-order-button" href="https://wa.me/8801791453443" target="_blank" rel="noopener noreferrer" aria-disabled="true">Order on WhatsApp ↗</a>
+          <p class="domain-note">Prices are Wavnix asking prices. Registration, premium-domain status and renewals are confirmed before payment. .ai pricing shown for its 2-year registration term.</p>
+          <div class="domain-service-row">
+            <div><strong>Free SSL</strong>HTTPS configuration</div>
+            <div><strong>DNS setup</strong>Cloudflare-ready</div>
+            <div><strong>Migration</strong>Existing site move</div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
     <section class="shell section education-wrap" id="education">
       <div class="education-intro"><div class="education-copy"><p class="kicker">Interactive flagship product</p><h2>One campus. Four connected experiences.</h2><p>Switch between roles to explore how Wavnix Education OS connects administration, teaching, learning and guardian communication.</p></div><div class="education-intro-action"><span><i></i>Interactive sample workspace</span><button class="btn dark" type="button" data-edu-demo>Request a live demo ◉</button></div></div>
       <div class="education-demo"><div class="education-demo-toolbar"><div><small>WAVNIX EDUCATION OS</small><b>Explore by user role</b></div><div class="education-role-tabs" id="education-role-tabs"></div><span class="demo-badge">DEMO DATA</span></div><div id="education-role-content"></div></div>
@@ -207,6 +294,106 @@
     document.getElementById("send-estimate").onclick=function(){var e=lastEstimate,labels=e.selected.map(function(x){return x.label}).join(", ")||"None selected",message=["Hello Wavnix, I generated a project estimate.","","Service: "+e.service.label,"Scope: "+e.scope.label,"Add-ons: "+labels,"Delivery: "+e.urgency.label,"Estimated budget: ৳"+estimateMoney(e.low)+" – ৳"+estimateMoney(e.high),"Estimated timeline: "+e.weekLow+"–"+e.weekHigh+" weeks","","I understand this is an initial estimate and want a detailed consultation."].join("\n");window.open("https://wa.me/8801791453443?text="+encodeURIComponent(message),"_blank","noopener,noreferrer")};
     var quoteForm=document.getElementById("quote-form");
     if(quoteForm){quoteForm.addEventListener("submit",function(event){event.preventDefault();var form=new FormData(quoteForm);var message=["Hello Wavnix, I want to discuss a project.","","Name: "+form.get("name"),"Business: "+(form.get("business")||"Not provided"),"Phone / email: "+form.get("contact"),"Service: "+form.get("service"),"Budget: "+form.get("budget"),"Project brief: "+form.get("brief")].join("\n");window.open("https://wa.me/8801791453443?text="+encodeURIComponent(message),"_blank","noopener,noreferrer")});}
+
+
+    (function initDomainShop(){
+      var form=document.getElementById("domain-search-form");
+      if(!form)return;
+      var input=document.getElementById("domain-search-input"),submit=document.getElementById("domain-search-submit"),result=document.getElementById("domain-result"),icon=document.getElementById("domain-result-icon"),title=document.getElementById("domain-result-title"),copy=document.getElementById("domain-result-copy"),priceBox=document.getElementById("domain-result-price"),alternatives=document.getElementById("domain-alternatives"),orderName=document.getElementById("domain-order-name"),orderDomainPrice=document.getElementById("domain-order-domain-price"),orderHosting=document.getElementById("domain-order-hosting"),orderTotal=document.getElementById("domain-order-total"),orderButton=document.getElementById("domain-order-button");
+      var prices={com:{price:1850,term:"first year"},net:{price:2050,term:"first year"},org:{price:1650,term:"first year"},xyz:{price:650,term:"first year"},io:{price:7900,term:"first year"},ai:{price:25500,term:"2 years"}};
+      var selectedTld=".com",selectedPlan={name:"Business",price:6500},currentDomain="",currentDomainPrice=null,currentAvailable=false,currentStatus="";
+      function money(value){return "৳"+new Intl.NumberFormat("en-BD").format(value)}
+      function normalizeDomain(value){
+        var clean=String(value||"").trim().toLowerCase().replace(/^https?:\/\//,"").split("/")[0].replace(/\.$/,"").replace(/\s+/g,"");
+        if(clean&&!clean.includes("."))clean+=selectedTld;
+        return clean;
+      }
+      function validDomain(domain){return domain.length>=3&&domain.length<=253&&domain.includes(".")&&domain.split(".").every(function(label){return label.length>0&&label.length<=63&&/^[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/.test(label)})}
+      function domainPrice(domain){var extension=domain.split(".").pop();return prices[extension]||null}
+      function setOrder(){
+        orderName.textContent=currentDomain||"Search first";
+        orderDomainPrice.textContent=currentDomainPrice===null?(currentDomain?"Price on request":"—"):money(currentDomainPrice);
+        orderHosting.textContent=selectedPlan.name+" · "+money(selectedPlan.price)+"/yr";
+        orderTotal.textContent=currentDomainPrice===null?money(selectedPlan.price)+" + domain":money(selectedPlan.price+currentDomainPrice);
+        var canOrder=currentAvailable||currentStatus==="unknown";
+        orderButton.setAttribute("aria-disabled",canOrder?"false":"true");
+        if(!canOrder){orderButton.href="https://wa.me/8801791453443";return}
+        var message=[
+          "Hello Wavnix, I want to order a domain and hosting package.",
+          "",
+          "Domain: "+currentDomain,
+          "Registry status: "+(currentAvailable?"Available (live public-registry check)":"Needs manual confirmation"),
+          "Domain asking price: "+(currentDomainPrice===null?"Price on request":money(currentDomainPrice)),
+          "Hosting plan: "+selectedPlan.name+" — "+money(selectedPlan.price)+"/year",
+          "Estimated first-term total: "+(currentDomainPrice===null?money(selectedPlan.price)+" + domain price":money(selectedPlan.price+currentDomainPrice)),
+          "",
+          "Please reconfirm availability, renewal price and payment steps."
+        ].join("\n");
+        orderButton.href="https://wa.me/8801791453443?text="+encodeURIComponent(message);
+      }
+      function render(state,domain,data){
+        result.dataset.state=state;alternatives.hidden=true;alternatives.innerHTML="";
+        currentDomain=domain||"";currentStatus=state;currentAvailable=state==="available";
+        var pricing=domain?domainPrice(domain):null;currentDomainPrice=pricing?pricing.price:null;
+        if(state==="loading"){
+          icon.textContent="↻";title.textContent="Checking "+domain+"…";copy.textContent="Connecting to the public registry. This normally takes a few seconds.";priceBox.innerHTML="<strong>Checking</strong><span>Live registry lookup</span>";
+        }else if(state==="available"){
+          icon.textContent="✓";title.textContent=domain+" looks available";copy.textContent="No registration record was found. Wavnix will perform a final registrar check before payment.";priceBox.innerHTML=pricing?"<strong>"+money(pricing.price)+"</strong><span>"+pricing.term+" asking price</span>":"<strong>Ask price</strong><span>Custom extension</span>";
+        }else if(state==="registered"){
+          icon.textContent="×";title.textContent=domain+" is already registered";copy.textContent="Try another extension below, or ask Wavnix to help find a strong alternative.";priceBox.innerHTML="<strong>Unavailable</strong><span>Registry record found</span>";loadAlternatives(domain);
+        }else if(state==="error"){
+          icon.textContent="!";title.textContent="Enter a valid domain";copy.textContent=(data&&data.message)||"Example: yourbrand.com";priceBox.innerHTML="<strong>Try again</strong><span>Letters, numbers and hyphens</span>";currentDomain="";currentDomainPrice=null;currentStatus="";
+        }else{
+          icon.textContent="?";title.textContent="Manual confirmation needed";copy.textContent=(data&&data.reason)||"The registry did not return a definite result. Send it to Wavnix for a manual check.";priceBox.innerHTML="<strong>Request check</strong><span>WhatsApp support</span>";currentStatus="unknown";
+        }
+        setOrder();
+      }
+      async function check(domain,silent){
+        var response=await fetch("/api/domain-check?domain="+encodeURIComponent(domain),{headers:{accept:"application/json"}});
+        var data=await response.json().catch(function(){return {}});
+        if(!response.ok&&data.status!=="unknown")throw new Error(data.error||"Check failed");
+        if(!silent)render(data.status==="registered"?"registered":data.status==="available"?"available":"unknown",domain,data);
+        return data;
+      }
+      async function loadAlternatives(domain){
+        var root=domain.slice(0,domain.lastIndexOf(".")),extensions=["com","net","org","xyz","io","ai"].filter(function(tld){return !domain.endsWith("."+tld)}).slice(0,5);
+        alternatives.hidden=false;alternatives.innerHTML="<span style=\"color:#778275;font-size:12px;padding:8px 2px\">Checking alternatives…</span>";
+        var found=await Promise.all(extensions.map(async function(tld){
+          var candidate=root+"."+tld;
+          try{var data=await check(candidate,true);return {domain:candidate,status:data.status}}catch(error){return {domain:candidate,status:"unknown"}}
+        }));
+        alternatives.innerHTML="";
+        found.forEach(function(item){
+          var button=document.createElement("button");button.type="button";button.textContent=item.domain+(item.status==="available"?" · available":"");
+          button.className=item.status==="available"?"available":item.status==="registered"?"registered":"";
+          button.disabled=item.status==="registered";button.addEventListener("click",function(){input.value=item.domain;searchDomain()});alternatives.appendChild(button);
+        });
+      }
+      async function searchDomain(){
+        var domain=normalizeDomain(input.value);
+        input.value=domain;
+        if(!validDomain(domain)){render("error","",{message:"Use a complete name such as wavnix.com."});return}
+        submit.disabled=true;render("loading",domain);
+        try{await check(domain,false)}catch(error){render("unknown",domain,{reason:"Live registry check is temporarily unavailable. Wavnix can confirm it manually."})}
+        finally{submit.disabled=false}
+      }
+      form.addEventListener("submit",function(event){event.preventDefault();searchDomain()});
+      document.querySelectorAll("[data-domain-tld]").forEach(function(button){
+        button.addEventListener("click",function(){
+          selectedTld=button.dataset.domainTld;document.querySelectorAll("[data-domain-tld]").forEach(function(item){item.classList.toggle("active",item===button)});
+          var value=normalizeDomain(input.value);if(value){var dot=value.lastIndexOf(".");input.value=value.slice(0,dot)+selectedTld}
+        });
+      });
+      document.querySelectorAll("[data-hosting-plan]").forEach(function(button){
+        button.addEventListener("click",function(){
+          selectedPlan={name:button.dataset.hostingPlan,price:Number(button.dataset.hostingPrice)};
+          document.querySelectorAll("[data-hosting-plan]").forEach(function(item){var selected=item===button;item.classList.toggle("selected",selected);item.setAttribute("aria-pressed",selected?"true":"false")});
+          setOrder();
+        });
+      });
+      orderButton.addEventListener("click",function(event){if(orderButton.getAttribute("aria-disabled")==="true")event.preventDefault()});
+      setOrder();
+    })();
 
     var storyDialog=document.getElementById("story-dialog"),storyOpen=document.querySelector("[data-story-open]");
     if(storyDialog&&storyOpen){storyOpen.onclick=function(){storyDialog.showModal()};storyDialog.addEventListener("click",function(event){if(event.target===storyDialog)storyDialog.close()})}
