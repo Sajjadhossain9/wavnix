@@ -249,7 +249,7 @@
     var capabilities=["Web applications","AI agents","Custom software","Mobile experiences","API development","Domain & hosting","Meta marketing","Business automation"];
     document.getElementById("marquee").innerHTML=capabilities.concat(capabilities).map(function(x){return "<span>"+x+" <i>✦</i></span>"}).join("");
     document.getElementById("hero-bars").innerHTML=[34,55,28,64,42,78,52,86,46,69,38,73,58,89,66,82].map(function(h){return '<i style="height:'+h+'%"></i>'}).join("");
-    document.getElementById("chart").innerHTML=[44,62,51,78,67,88,74,92,70,84,96,82].map(function(h){return '<i style="height:'+h+'%"></i>'}).join("");
+    var chart=document.getElementById("chart");if(chart){chart.innerHTML=[44,62,51,78,67,88,74,92,70,84,96,82].map(function(h){return '<i style="height:'+h+'%"></i>'}).join("")}
     var services=[
       {n:"01",icon:"⌘",a:"lime",label:"Custom software",title:"Software built around the way your business works.",desc:"From internal tools to complete business platforms, we design systems that remove friction and create room to scale.",features:["ERP, CRM & SaaS","POS & inventory","Dashboards & portals"]},
       {n:"02",icon:"✦",a:"violet",label:"AI & automation",title:"Intelligent workflows that keep working after hours.",desc:"We connect AI agents, business data and everyday tools to automate support, qualification, reporting and repetitive operations.",features:["AI agents & chatbots","Workflow automation","Knowledge assistants"]},
